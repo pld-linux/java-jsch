@@ -12,6 +12,7 @@ URL:		http://www.jcraft.com/jsch/
 BuildRequires:	jakarta-ant
 BuildRequires:	jdk >= 1.4
 BuildRequires:	unzip
+BuildRequires:	sed >= 4.0
 Requires:	jre >= 1.4
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -30,6 +31,7 @@ transfer plików.
 %prep
 %setup -q
 %patch0 -p1
+sed -i -e 's/VERSION/%{version}/g' build.xml
 
 %build
 ant
@@ -38,8 +40,8 @@ ant
 rm -rf $RPM_BUILD_ROOT
 
 install -d $RPM_BUILD_ROOT{%{_javadir},%{_examplesdir}/%{name}-%{version}}
-install dist/lib/jsch-*.jar $RPM_BUILD_ROOT%{_javadir}
-ln -s jsch-*.jar $RPM_BUILD_ROOT%{_javadir}/jsch.jar
+install dist/lib/jsch-%{version}.jar $RPM_BUILD_ROOT%{_javadir}
+ln -s jsch-%{version}.jar $RPM_BUILD_ROOT%{_javadir}/jsch.jar
 cp -rf examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
