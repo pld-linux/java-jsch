@@ -1,0 +1,13 @@
+--- jsch-0.1.16/build.xml~	2003-05-20 08:48:05.000000000 +0200
++++ jsch-0.1.16/build.xml	2004-12-21 12:57:46.422295120 +0100
+@@ -41,8 +41,8 @@
+     <!-- Create the distribution directory -->
+     <mkdir dir="${dist}/lib"/>
+ 
+-    <!-- Put everything in ${build} into the MyProject-${DSTAMP}.jar file -->
+-    <jar jarfile="${dist}/lib/jsch-${DSTAMP}.jar" basedir="${build}"/>
++    <!-- Put everything in ${build} into the MyProject-${version}.jar file -->
++    <jar jarfile="${dist}/lib/jsch-${version}.jar" basedir="${build}"/>
+   </target>
+ 
+   <target name="examples"
