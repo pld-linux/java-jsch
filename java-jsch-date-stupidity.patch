@@ -7,7 +7,7 @@
 -    <!-- Put everything in ${build} into the MyProject-${DSTAMP}.jar file -->
 -    <jar jarfile="${dist}/lib/jsch-${DSTAMP}.jar" basedir="${build}"/>
 +    <!-- Put everything in ${build} into the MyProject-${version}.jar file -->
-+    <jar jarfile="${dist}/lib/jsch-${version}.jar" basedir="${build}"/>
++    <jar jarfile="${dist}/lib/jsch-VERSION.jar" basedir="${build}"/>
    </target>
  
    <target name="examples"
