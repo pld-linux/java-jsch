@@ -1,4 +1,5 @@
-Summary:	JSch - a pure Java implementation of SSH2.
+Summary:	JSch - a pure Java implementation of SSH2
+Summary(pl):	JSch - implementacja protoko³u SSH2 w jêzyku Java
 Name:		jsch
 Version:	0.1.16
 Release:	1
@@ -9,6 +10,7 @@ Source0:	http://dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.zip
 URL:		http://www.jcraft.com/jsch/
 BuildRequires:	jakarta-ant
 BuildRequires:	jdk >= 1.4
+BuildRequires:	unzip
 Requires:	jre >= 1.4
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -16,6 +18,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 JSch allows you to connect to an sshd server and use port forwarding,
 X11 forwarding, file transfer, etc., and you can integrate its
 functionality into your own Java programs.
+
+%description -l pl
+JSch pozwala na przeniesienie funkcjonalno¶ci protoko³u SSH2 do
+aplikacji pisanych w jêzyku Java.
 
 %prep
 %setup -q
