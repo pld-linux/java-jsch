@@ -22,7 +22,9 @@ functionality into your own Java programs.
 
 %description -l pl
 JSch pozwala na przeniesienie funkcjonalno¶ci protoko³u SSH2 do
-aplikacji pisanych w jêzyku Java.
+aplikacji pisanych w jêzyku Java. Umo¿liwia m.in. ³±czenie siê z
+serwerem sshd, wykorzystanie przekazywania portów oraz sesji X11,
+transfer plików.
 
 %prep
 %setup -q
@@ -45,4 +47,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc ChangeLog README
 %{_javadir}/*.jar
-%{_examplesdir}/%{name}-%{version}/*
+%{_examplesdir}/%{name}-%{version}
