@@ -37,7 +37,7 @@ rm -rf $RPM_BUILD_ROOT
 
 install -d $RPM_BUILD_ROOT{%{_javadir},%{_examplesdir}/%{name}-%{version}}
 install dist/lib/jsch-20040713.jar $RPM_BUILD_ROOT%{_javadir}
-ln -s jsch-20040713.jar $RPM_BUILD_ROOT%{_javadir}/jsch.jar
+ln -s jsch-20041214.jar $RPM_BUILD_ROOT%{_javadir}/jsch.jar
 cp -rf examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
