@@ -9,7 +9,7 @@ Source0:	http://dl.sourceforge.net/jsch/%{name}-%{version}.zip
 # Source0-md5:	b965afb2cea1bd6c541e833862022564
 Patch0:		%{name}-date-stupidity.patch
 URL:		http://www.jcraft.com/jsch/
-BuildRequires:	jakarta-ant >= 1.5.0
+BuildRequires:	ant >= 1.5.0
 BuildRequires:	jdk >= 1.4
 BuildRequires:	sed >= 4.0
 BuildRequires:	unzip
