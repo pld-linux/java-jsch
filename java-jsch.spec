@@ -39,7 +39,7 @@ Group:		Documentation
 %description javadoc
 JSch API documentation.
 
-%description -l pl javadoc
+%description javadoc -l pl
 Dokumentacja API JSch.
 
 %prep
