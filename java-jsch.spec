@@ -11,10 +11,13 @@ Patch0:		%{name}-date-stupidity.patch
 URL:		http://www.jcraft.com/jsch/
 BuildRequires:	ant >= 1.5.0
 BuildRequires:	jdk >= 1.4
+BuildRequires:	jpackage-utils
+BuildRequires:	rpmbuild(macros) >= 1.300
 BuildRequires:	sed >= 4.0
 BuildRequires:	unzip
 Requires:	jre >= 1.4
 BuildArch:	noarch
+ExclusiveArch:	i586 i686 pentium3 pentium4 athlon %{x8664} noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -28,21 +31,36 @@ aplikacji pisanych w jêzyku Java. Umo¿liwia m.in. ³±czenie siê z
 serwerem sshd, wykorzystanie przekazywania portów oraz sesji X11,
 transfer plików.
 
+%package javadoc
+Summary:	JSch API documentation
+Summary(pl):	Dokumentacja API JSch
+Group:		Documentation
+
+%description javadoc
+JSch API documentation.
+
+%description -l pl javadoc
+Dokumentacja API JSch.
+
 %prep
 %setup -q
 %patch0 -p1
 sed -i -e 's/VERSION/%{version}/g' build.xml
 
 %build
-ant
+unset CLASSPATH || :
+export JAVA_HOME="%{java_home}"
+ant dist javadoc
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_javadir},%{_examplesdir}/%{name}-%{version}}
+install -d $RPM_BUILD_ROOT{%{_javadir},{%{_javadocdir},%{_examplesdir}}/%{name}-%{version}}
 
 install dist/lib/jsch-%{version}.jar $RPM_BUILD_ROOT%{_javadir}
 ln -s jsch-%{version}.jar $RPM_BUILD_ROOT%{_javadir}/jsch.jar
 cp -rf examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+
+cp -R javadoc/* $RPM_BUILD_ROOT%{_javadocdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -52,3 +70,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc ChangeLog README
 %{_javadir}/*.jar
 %{_examplesdir}/%{name}-%{version}
+
+%files javadoc
+%defattr(644,root,root,755)
+%doc %{_javadocdir}/%{name}-%{version}
