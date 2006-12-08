@@ -2,7 +2,7 @@ Summary:	JSch - a pure Java implementation of SSH2
 Summary(pl):	JSch - implementacja protoko³u SSH2 w jêzyku Java
 Name:		jsch
 Version:	0.1.20
-Release:	1
+Release:	2
 License:	BSD-like
 Group:		Development/Languages/Java
 Source0:	http://dl.sourceforge.net/jsch/%{name}-%{version}.zip
@@ -35,6 +35,7 @@ transfer plików.
 Summary:	JSch API documentation
 Summary(pl):	Dokumentacja API JSch
 Group:		Documentation
+Requires:	jpackage-utils
 
 %description javadoc
 JSch API documentation.
@@ -50,7 +51,7 @@ sed -i -e 's/VERSION/%{version}/g' build.xml
 %build
 unset CLASSPATH || :
 export JAVA_HOME="%{java_home}"
-ant dist javadoc
+%ant dist javadoc
 
 %install
 rm -rf $RPM_BUILD_ROOT
