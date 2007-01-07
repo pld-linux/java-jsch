@@ -1,12 +1,12 @@
 Summary:	JSch - a pure Java implementation of SSH2
 Summary(pl):	JSch - implementacja protoko³u SSH2 w jêzyku Java
 Name:		jsch
-Version:	0.1.20
-Release:	2
+Version:	0.1.30
+Release:	1
 License:	BSD-like
 Group:		Development/Languages/Java
 Source0:	http://dl.sourceforge.net/jsch/%{name}-%{version}.zip
-# Source0-md5:	b965afb2cea1bd6c541e833862022564
+# Source0-md5:	675f659e2edb33e2abf8c5b5bdba79d5
 Patch0:		%{name}-date-stupidity.patch
 URL:		http://www.jcraft.com/jsch/
 BuildRequires:	ant >= 1.5.0
