@@ -1,5 +1,5 @@
 Summary:	JSch - a pure Java implementation of SSH2
-Summary(pl):	JSch - implementacja protoko³u SSH2 w jêzyku Java
+Summary(pl.UTF-8):   JSch - implementacja protokoÅ‚u SSH2 w jÄ™zyku Java
 Name:		jsch
 Version:	0.1.31
 Release:	1
@@ -25,22 +25,22 @@ JSch allows you to connect to an sshd server and use port forwarding,
 X11 forwarding, file transfer, etc., and you can integrate its
 functionality into your own Java programs.
 
-%description -l pl
-JSch pozwala na przeniesienie funkcjonalno¶ci protoko³u SSH2 do
-aplikacji pisanych w jêzyku Java. Umo¿liwia m.in. ³±czenie siê z
-serwerem sshd, wykorzystanie przekazywania portów oraz sesji X11,
-transfer plików.
+%description -l pl.UTF-8
+JSch pozwala na przeniesienie funkcjonalnoÅ›ci protokoÅ‚u SSH2 do
+aplikacji pisanych w jÄ™zyku Java. UmoÅ¼liwia m.in. Å‚Ä…czenie siÄ™ z
+serwerem sshd, wykorzystanie przekazywania portÃ³w oraz sesji X11,
+transfer plikÃ³w.
 
 %package javadoc
 Summary:	JSch API documentation
-Summary(pl):	Dokumentacja API JSch
+Summary(pl.UTF-8):   Dokumentacja API JSch
 Group:		Documentation
 Requires:	jpackage-utils
 
 %description javadoc
 JSch API documentation.
 
-%description javadoc -l pl
+%description javadoc -l pl.UTF-8
 Dokumentacja API JSch.
 
 %prep
