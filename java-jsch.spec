@@ -1,5 +1,5 @@
 Summary:	JSch - a pure Java implementation of SSH2
-Summary(pl.UTF-8):   JSch - implementacja protokołu SSH2 w języku Java
+Summary(pl.UTF-8):	JSch - implementacja protokołu SSH2 w języku Java
 Name:		jsch
 Version:	0.1.31
 Release:	1
@@ -33,7 +33,7 @@ transfer plików.
 
 %package javadoc
 Summary:	JSch API documentation
-Summary(pl.UTF-8):   Dokumentacja API JSch
+Summary(pl.UTF-8):	Dokumentacja API JSch
 Group:		Documentation
 Requires:	jpackage-utils
 
