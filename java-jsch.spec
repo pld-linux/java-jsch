@@ -21,7 +21,6 @@ BuildRequires:	unzip
 Requires:	jre >= 1.4
 Obsoletes:	jsch
 BuildArch:	noarch
-ExclusiveArch:	i586 i686 pentium3 pentium4 athlon %{x8664} noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
