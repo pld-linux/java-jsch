@@ -39,6 +39,7 @@ Summary:	JSch API documentation
 Summary(pl.UTF-8):	Dokumentacja API JSch
 Group:		Documentation
 Requires:	jpackage-utils
+Obsoletes:	jsch-javadoc
 
 %description javadoc
 JSch API documentation.
