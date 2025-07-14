@@ -49,7 +49,7 @@ Dokumentacja API JSch.
 
 %prep
 %setup -qn %{pkgname}-%{version}
-%patch0 -p1
+%patch -P0 -p1
 sed -i -e 's/VERSION/%{version}/g' build.xml
 
 %build
