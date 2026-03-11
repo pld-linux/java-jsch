@@ -1,5 +1,5 @@
 #
-%{?use_default_jdk}
+%{?use_default_jdk:%use_default_jdk 8}
 
 %define		pkgname	jsch
 #
