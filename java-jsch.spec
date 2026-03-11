@@ -1,4 +1,6 @@
 #
+%{?use_default_jdk}
+
 %define		pkgname	jsch
 #
 Summary:	JSch - a pure Java implementation of SSH2
@@ -13,9 +15,9 @@ Source0:	http://downloads.sourceforge.net/jsch/%{pkgname}-%{version}.zip
 Patch0:		%{name}-date-stupidity.patch
 URL:		http://www.jcraft.com/jsch/
 BuildRequires:	ant >= 1.5.0
-BuildRequires:	jdk >= 1.4
+%buildrequires_jdk
 BuildRequires:	jpackage-utils
-BuildRequires:	rpmbuild(macros) >= 1.300
+BuildRequires:	rpmbuild(macros) >= 2.021
 BuildRequires:	sed >= 4.0
 BuildRequires:	unzip
 Requires:	jre >= 1.4
