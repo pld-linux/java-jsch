@@ -19,7 +19,6 @@ BuildRequires:	jpackage-utils
 BuildRequires:	rpmbuild(macros) >= 2.021
 BuildRequires:	sed >= 4.0
 BuildRequires:	unzip
-Requires:	jre >= 1.4
 Obsoletes:	jsch
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
